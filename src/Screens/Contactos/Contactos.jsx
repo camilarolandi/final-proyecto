@@ -1,4 +1,3 @@
-/* Pantalla de contactos*/
 import React, { useEffect, useState } from 'react'
 import { MOOK_CONTACTOS } from '../../../Mook'
 import {json, Link, useParams} from 'react-router-dom'
@@ -19,19 +18,6 @@ export const Contactos = ({ContactSelect,hideWelcome}) => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
     
     
-    const contactosLocalStorage = () => {
-        const storedContactos = localStorage.getItem('contactos')
-        if (storedContactos) {
-            setListaContactos(JSON.parse(storedContactos))
-        } else {
-            setListaContactos(MOOK_CONTACTOS)
-        }
-    }
-
-    const saveContactosLocalStorage = (contactos) => {
-        localStorage.setItem('contactos', JSON.stringify(contactos));
-    }
-
 
 const newContacto = (nuevoNombre,nuevoApellido,nuevoTelefono,nuevoThumbnail) => {
 		
@@ -53,18 +39,16 @@ const newContacto = (nuevoNombre,nuevoApellido,nuevoTelefono,nuevoThumbnail) => 
                     id: '1'
                 }] 
         }
-        const updatedContactos = [...listaContactos, contacto_nvo];
-        setListaContactos(updatedContactos);
-        saveContactosLocalStorage(updatedContactos);
+        const updatedContactos = [...listaContactos, contacto_nvo]
+        setListaContactos(updatedContactos)
+    
+        
     }
 
     const isChatSelected = listaContactos.some(contact => contact.is_selected === true)
     useEffect(() => {}, [location])
     
-    
-    useEffect(() => {
-        contactosLocalStorage()
-    }, [])
+
 
     useEffect (() => {
         const handleResize = () => {
@@ -86,13 +70,13 @@ const newContacto = (nuevoNombre,nuevoApellido,nuevoTelefono,nuevoThumbnail) => 
 
     useEffect ( () => {
         if (searchString ){
-            const listaContactosFilter = listaContactos.filter(contacto=> contacto.nombre.toLowerCase().includes(searchString.toLowerCase()) || contacto.apellido.toLowerCase().includes(searchString.toLowerCase()))
+            const listaContactosFilter = MOOK_CONTACTOS.filter(contacto=> contacto.nombre.toLowerCase().includes(searchString.toLowerCase()) || contacto.apellido.toLowerCase().includes(searchString.toLowerCase()))
             
             setListaContactos(listaContactosFilter)
         }
         else {
 
-            contactosLocalStorage();
+            setListaContactos(MOOK_CONTACTOS)
             
         }
     },
@@ -220,3 +204,4 @@ const hideNvoContact = () => {
         </>
     )
 }
+
