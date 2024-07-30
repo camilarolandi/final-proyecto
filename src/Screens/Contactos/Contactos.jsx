@@ -118,7 +118,7 @@ const hideNvoContact = () => {
 
                     <div className='icons-fns-left'>
                         <i className="icons-left bi bi-people"></i>
-                        <button onClick={showNvoContact}><i className= "icons-left bi bi-disc" ></i></button>
+                        <button className='btn-form' onClick={showNvoContact}><i className= "icons-left bi bi-disc" ></i></button>
                         <i className= "icons-left bi bi-chat-quote" ></i>
                         <i className= "icons-left bi bi-chat-right-dots"></i>
                         <i className= "icons-left bi bi-three-dots-vertical" ></i>

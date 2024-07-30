@@ -16,17 +16,17 @@ const handleSubmitNewContacto=(e) =>{
 	return (
 		<div className='cont-form-nvo-contacto'>
 			<form className='form-nvo-contacto' onSubmit={handleSubmitNewContacto} >
-			<button onClick={onCloseNvoContact}> <i className="bi bi-x-lg"></i>
+			<button className= "btn-contact-nvo"onClick={onCloseNvoContact}> <i className="bi bi-x-lg"></i>
             </button>
                 <label>Nombre</label>
-				<input className= "input-texto" type="text" name="nombre" id="nombre" placeholder='Nombre'/>
+				<input className= "input-contact" type="text" name="nombre" id="nombre" placeholder='Nombre'/>
                 <label>Apellido</label>
-				<input className= "input-texto" type="text" name="apellido" id="apellido" placeholder='Apellido'/>
+				<input className= "input-contact" type="text" name="apellido" id="apellido" placeholder='Apellido'/>
                 <label>Telefono</label>
-				<input className= "input-texto" type="text" name="telefono" id="telefono" placeholder='Telefono'/>
+				<input className= "input-contact" type="text" name="telefono" id="telefono" placeholder='Telefono'/>
 				<label>Thumnail</label>
-				<input className= "input-texto" type="text" name="thumbnail" id="thumbnail" placeholder='Thumbnail'/>
-				<button  type='submit'>enviar</button>
+				<input className= "input-contact" type="text" name="thumbnail" id="thumbnail" placeholder='Thumbnail'/>
+				<button className= "btn-contact-nvo" type='submit'><i className="bi bi-send"></i></button>
 			</form>
 		</div>
 	)
