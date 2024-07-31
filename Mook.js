@@ -59,6 +59,7 @@ export const MOOK_CONTACTOS =[
         email: "pamela@gmail.com" ,
         thumbnail: "https://www.creartuavatar.com/images/f9.svg",
         estado_contacto:"En linea",
+        nombre_usuario: "Soy pame",
         mensajes:[
                     {
                         author: 'Yo',
@@ -114,6 +115,7 @@ export const MOOK_CONTACTOS =[
     email: "rocky@gmail.com" ,
     thumbnail:"https://www.creartuavatar.com/images/m21.svg",
     estado_contacto:"",
+    nombre_usuario: "Rockkkk",
     mensajes:[
                 {
                     author: 'Rocky',
@@ -134,6 +136,8 @@ export const MOOK_CONTACTOS =[
     direccion:"Av Rojo 456",
     email: "juan@gmail.com" ,
     thumbnail:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5tGpt51vRnXj2WCU_mjiZf067XXTCYgjGLQ&s",
+    estado_contacto: "En linea",
+    nombre_usuario: "Juancitoooo :P",
     mensajes:[
                 {
                     author: 'Yo',
@@ -155,6 +159,7 @@ export const MOOK_CONTACTOS =[
     email: "miguel@gmail.com" ,
     thumbnail:"https://www.creartuavatar.com/images/m6.svg",
     estado_contacto:"Escribiendo...",
+    nombre_usuario: "RodriguezMiguel-",
     mensajes:[
                 {
                     author: 'Yo',
@@ -176,6 +181,7 @@ export const MOOK_CONTACTOS =[
     email: "carolina@gmail.com" ,
     thumbnail:"https://www.creartuavatar.com/images/f24.svg",
     estado_contacto:"",
+    nombre_usuario: "Caro_azul",
     mensajes:[
                 {
                     author: 'Carolina',
@@ -197,6 +203,7 @@ export const MOOK_CONTACTOS =[
     email: "valeria@gmail.com" ,
     thumbnail:"https://www.creartuavatar.com/images/f15.svg",
     estado_contacto:"Escribiendo",
+    nombre_usuario: "Vale",
     mensajes:[
                 {
                     author: 'Valeria',

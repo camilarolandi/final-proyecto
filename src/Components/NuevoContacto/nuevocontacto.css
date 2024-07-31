@@ -1,24 +1,32 @@
+:root {
+    --bgcolor-primary: #000000;
+    --font-color: #ffffff;
+    --border-color: #000000;
+    --bgcolor-secondary: #1d1d1d;
+    --bgcolor-chat-izq: #1d1d1d;;
+    --bgcolor-chat-der: #0f5515;
+    --bgcolor-primary-light: rgb(255, 255, 255);
+    --font-color-light: #000000;
+    --bgcolor-secondary-light: #f0f2f5;
+    --bgcolor-input: #808080;
+    --bgcolor-input: #808080;
+}
 
 
 
 
 .cont-form-nvo-contacto{
-    width: 60%;
+    width: 30%;
     height: 100%;
-    /* position: absolute;
-    z-index: 1; */
     background-color: #808080;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+
     
 }
 
 .form-nvo-contacto{
     border: 1px solid black;
-    width: 90%;
+    width: 100%;
     height: 100%;
     background-color: #1D1D1D;
     display: flex;
@@ -26,8 +34,18 @@
     gap: 10px;
     color: white;
     padding: 10px;
+    justify-content: center;
+    font-size: 12px;
 }
 
+.form-contacto-header{
+    display: flex;
+    font-size: 10px;
+    justify-content: start;
+    gap:20px;
+    margin-bottom:15px ;
+    
+}
 
 .input-contact{
     border: 2px;
@@ -38,14 +56,34 @@
     text-indent: 10px;
 
 }
+
+.nvo-contacto-btns-inf{
+display: flex;
+gap:10px;
+margin-top: 10px;
+
+}
 .btn-contact-nvo{
     background-color:transparent;
     font-size: 16px;
     width: 10%;
     color:white;
     border: none;
+    
 }
 
 .input-contact::placeholder{
     color:#000000
+}
+
+@media (max-width: 590px) {
+.form-nvo-contacto {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.cont-form-nvo-contacto{
+width:100%;
+overflow: hidden;
+} 
 }

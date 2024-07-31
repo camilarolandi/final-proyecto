@@ -31,10 +31,10 @@
     justify-content: center;
     align-items: center;
     }
-   
-/* 
-  @media (max-width: 590px) {
-        .main-layout{
-       flex-direction:column;
-        } 
-        }   */
+
+
+@media (max-width: 590px) {
+.welcome-screen{
+display: none;
+    } 
+}   

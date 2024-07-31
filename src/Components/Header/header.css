@@ -12,7 +12,7 @@
 }
 .header{
     background-color:var(--bgcolor-secondary);
-    height: 10%;
+    height: 65px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -20,7 +20,7 @@
     overflow: hidden;
     position:relative;
     padding: 0px 10px;
-    
+    /* margin: 5px 0; */
 }
 
 .flecha{
@@ -38,9 +38,7 @@
     overflow: hidden;
     width: 80%;
     height: 100%;
-
 }
-
 
 .nombre{
     font-size: 14px;
@@ -53,10 +51,10 @@
 }
 
 .profile-photo{
-    height: 41px;
-    width: 41px;
+    height: 45px;
+    width: 45px;
     border-radius: 100%;
-    margin:0 15px;
+    margin-left: 30px;
 }
 
 

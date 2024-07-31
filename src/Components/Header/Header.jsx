@@ -18,8 +18,10 @@ const {contactoID } = useParams()
 				
 				<Link className='flecha' onClick={() => unselectContact(contacto)} to = {"/"}><i class="bi bi-arrow-left"></i></Link>
 					<div className='contenedor-contacto'>
+					{/* <Link 
+					className='photo-link' to={"/contactodata/" + contacto.id + "/screen"}><img className='profile-photo' src= {contacto.thumbnail} alt="profile-photos" /></Link>	 */}
 					<Link 
-					className='photo-link' to={"/contactodata/" + contacto.id + "/screen"}><img className='profile-photo' src= {contacto.thumbnail} alt="profile-photos" /></Link>	
+					className='photo-link' to={"/contactodata/" + contacto.id}><img className='profile-photo' src= {contacto.thumbnail} alt="profile-photos" /></Link>	
 					<div className='contenedor-nombre'>
 						<span className='nombre'>{contacto.nombre} {contacto.apellido}</span>
 						<span className='mensaje-texto'>{contacto.estado_contacto} </span>
