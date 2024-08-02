@@ -15,7 +15,7 @@
 .form-mje-enviar{
     display: flex;
     height:10%;
-    width: 100%;
+    width: 100%;;
     background-color:#2c2b2bf6;  
    /*  background-color:#2c2b2bfb;  */
     border-bottom: 3px solid var(--bgcolor-secondary);
@@ -25,9 +25,8 @@
     justify-content: space-between;
     align-items: center;
     border-left: 1px solid var(--border-color);
-   /*  position: fixed;
+    /* position: fixed;
     bottom: 0; */
-    
 }
 
 
@@ -102,7 +101,6 @@
     .btn{
     display: none;
     } 
-    
 }
 
 @media (max-width: 590px) {
@@ -117,8 +115,4 @@
     .smile{
         display: none;
     }
-    .form-mje-enviar{
-        position: static;
-        display: none;
-        }
 }
