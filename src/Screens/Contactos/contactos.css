@@ -69,7 +69,7 @@ width: 100%;
 }
 
 .titulos-contactos{
-font-size: 18px;
+font-size: 30px;
 font-weight: bold;
 color:var(--bgcolor-primary);
 width: 30%;
@@ -142,7 +142,9 @@ justify-content: space-between;
 align-items: center;
 padding: 10px 15px 15px;
 font-size: 12px;
-background-color:#7272727e; ;
+background-color:#2c2b2bf6; 
+position: fixed;
+bottom: 0;
 
 }
 

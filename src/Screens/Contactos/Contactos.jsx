@@ -365,8 +365,12 @@ export const Contactos = ({ ContactSelect, hideWelcome }) => {
                             <i className="bi bi-chat"></i>
                             <span>Chats</span>
                         </div>
+
+
                         <div className="icons-mobile">
+                            <button style={{color:"white", background:"transparent", border:"none"}}  onClick={showProfile}>
                             <i className="bi bi-gear-wide-connected"></i>
+                            </button>
                             <span>Configuracion</span>
                         </div>
                     </div>
