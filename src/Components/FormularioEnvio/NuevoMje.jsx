@@ -21,7 +21,7 @@ export const NuevoMje = ({enviarMensaje}) => {
                     <i className=" bi bi-plus-lg"></i>
                 </div>
 				<input className= "input-texto" type="text" name="mensaje" id="mensaje" placeholder='Mensaje'/>
-				<button className= "btn" type='submit'><i className="bi bi-send"></i></button> 
+				<button className= "btn" type='submit'><i className="btn bi bi-send"></i></button> 
                 <i className=" emoji bi bi-mic-fill"></i>
 
 			</form>

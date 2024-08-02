@@ -54,7 +54,7 @@
     height: 45px;
     width: 45px;
     border-radius: 100%;
-    margin-left: 30px;
+    margin-left: 35px;
 }
 
 
@@ -107,17 +107,17 @@
 @media (max-width: 700px) {
 
     .nombre{
-    font-size: 12px;
+    font-size: 14px;
     }
     
 }
 
 @media (max-width: 590px) {
     .btns-header{
-        gap:10px;
+        gap:15px;
         }
         .btn-header{
-            font-size: 12px;
+            font-size: 18px;
             }
 }
 

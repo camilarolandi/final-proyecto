@@ -236,7 +236,8 @@
     text-align: center;
     font-size: 14px;
     gap:20px;
-    margin-top: 20px
+    margin: 20px 0px;
+    
 }
 
 
@@ -253,6 +254,12 @@
         left: 0%;
         border-radius:0%;
     }
+
+    .photo{
+        width: 100px;
+        height: 100px;
+        }
+
    /*  .container-nombre-foto-opciones{
         height: 70%;
     }
