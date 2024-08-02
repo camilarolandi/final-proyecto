@@ -15,28 +15,33 @@
 
 
 
-.cont-form-nvo-contacto{
-    width: 30%;
+/* .cont-form-nvo-contacto{
+    width: 35%;
     height: 100%;
     background-color: #808080;
     display: flex;
-
-    
-}
+    position: absolute;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid var(--bgcolor-primary);
+} 
 
 .form-nvo-contacto{
-    border: 1px solid black;
-    width: 100%;
-    height: 100%;
+    border: 1px solid var(--bgcolor-primary);
+    width: 50%;
+    height: 70%;
     background-color: #1D1D1D;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    color: white;
+    color:var(--font-color);
     padding: 10px;
     justify-content: center;
     font-size: 12px;
+    align-items: center;
 }
+    
 
 .form-contacto-header{
     display: flex;
@@ -50,18 +55,17 @@
 .input-contact{
     border: 2px;
     width: 90% ;
- /*    height: 100%; */
     border-radius: 15px;
     background-color: var(--bgcolor-input);
     text-indent: 10px;
 
 }
 
-.nvo-contacto-btns-inf{
+nvo-contacto-btns-inf{
 display: flex;
 gap:50px;
 margin-top: 10px;
-justify-content: center;
+justify-content: center;.
 
 
 }
@@ -69,12 +73,12 @@ justify-content: center;
     background-color:transparent;
     font-size: 12px;
     
-    color:white;
+    color:var(--font-color);
     border:none;
 }
 
 .input-contact::placeholder{
-    color:#000000
+    color:var(--bgcolor-primary);
 }
 
 @media (max-width: 590px) {
@@ -87,4 +91,145 @@ justify-content: center;
 width:100%;
 overflow: hidden;
 } 
+} */
+
+/*     .cont-form-nvo-contacto {
+    max-width: 40%;
+    margin: 0 auto;
+    background-color: #1d1d1d; 
+    color:var(--bgcolor-input); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+    height:100%;
+    overflow: hidden;
+   /*  position: absolute;
+    z-index: 1;} */
+
+.form-nvo-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #1d1d1d; 
+    padding: 30px;
+    height: 100%;
+    width:30%;
+    justify-content: space-between;
+
 }
+.form-contacto-header{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.form-input-contenedor{
+  /*   margin-bottom: 15px; */
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.label-contact {
+    font-weight: bold;
+    color:var(--bgcolor-input) ;
+    padding:5px;
+    font-size: 14px;
+}
+
+.input-contact {
+    width: 100%;
+    padding: 5px 5px 5px 10px;
+    border: 1px solid var(--bgcolor-input);
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #000000; 
+    color: var(--bgcolor-input); 
+    font-size: 12px;
+
+}
+
+.nuevo-contacto-tittle{
+    font-size: 16px;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    margin: 0px;
+    color: var(--bgcolor-input);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.438)
+
+}
+ .btn-contact-nvo{
+    background-color: transparent;
+    border: none;
+    color: var(--font-color);
+    text-align: center;
+    width: 80%;
+    padding: 8px;
+    color: var(--bgcolor-primary);
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: var(--bgcolor-input);
+    font-size: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.418)
+}
+
+.cont-contact-nvo{
+    display: flex;
+    flex-direction: row;
+    padding: px;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.icon-contacto-nvo{
+    padding: 10px;
+text-align: start;
+}
+
+.nvo-contacto-btns-inf{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.texto-bottom{
+    font-size: 15px;
+    text-align: center;
+    color: var(--bgcolor-input);
+}
+
+
+
+@media (max-width: 590px) {
+    .cont-form-nvo-contacto{
+    width:100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    } 
+    .form-nvo-contacto {
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        height: 100%;
+    }
+
+}
+/* <i class="bi bi-person-add"></i> */
+
+

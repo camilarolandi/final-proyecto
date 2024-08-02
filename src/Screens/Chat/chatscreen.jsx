@@ -1,8 +1,7 @@
 
 /* Pantalla del chat */
 
- import React, { useEffect, useState } from 'react'
-import { MOOK_CONTACTOS } from '../../../Mook'
+/* import { MOOK_CONTACTOS } from '../../../Mook'
 import {  useParams } from 'react-router-dom'
 import { Header, ListaDeMensajes, NuevoMje } from '../../Components'
 import "./screenchat.css"
@@ -15,16 +14,23 @@ export const Screen = ( ) => {
   	const contacto = MOOK_CONTACTOS[contactoIndex]
 	const {mensajes} = contacto
 	const [mensajes_data, setMensajesInfo]= useState(mensajes)
+	const [unselectedContact, setUnSelectedContact] = useState(false)  
 
-
-	const unselectContact = (contact) => {
+const unselectedContact = (contact) => {
 		contact.is_selected = false
-	}
+	} 
 
-	useEffect(()=> {
+ useEffect(()=> {
 		setMensajesInfo(mensajes)
 	}, [contactoID,mensajes]
 )
+
+ useEffect(() => {
+	const contactoUnSelect = MOOK_CONTACTOS.find(contacto => contacto.id === Number(contactoID));
+	setUnSelectedContact(contactoUnSelect)
+}, [contactoID])
+
+const contactUnSelect = unselectedContact !== false 
 
 	const newMensaje = (nuevoMensaje) => {
 		const mje_nvo =   {
@@ -43,21 +49,22 @@ export const Screen = ( ) => {
 	return (
 		<>
 			<div className='screen-chat'>
-        <Header unselectContact={ unselectContact }/>
+        <Header unselectContact={ unselectedContact}/>
         <ListaDeMensajes mensajes_info = {mensajes_data} />
         <NuevoMje enviarMensaje={newMensaje}/>
 		</div>
 		</>
 
 		)
-	} 
+	}  
+
+ */
+		
 
 
 
 
-
-
-	/* import React, { useEffect, useState } from 'react';
+/*  import React, { useEffect, useState } from 'react';
 	import { MOOK_CONTACTOS } from '../../../Mook';
 	import { useParams } from 'react-router-dom';
 	import { Header, ListaDeMensajes, NuevoMje } from '../../Components';
@@ -65,19 +72,16 @@ export const Screen = ( ) => {
 	import '../../styles.css';
 	
 	export const Screen = () => {
-		const { contactoID } = useParams();
-		const contactoIndex = MOOK_CONTACTOS.findIndex(contacto => contacto.id === Number(contactoID));
-		const contacto = MOOK_CONTACTOS[contactoIndex];
-		const { mensajes } = contacto;
-		const [mensajes_data, setMensajesInfo] = useState(mensajes);
+		const { contactoID } = useParams()
+		const contactoIndex = MOOK_CONTACTOS.findIndex(contacto => contacto.id === Number(contactoID))
+		const contacto = MOOK_CONTACTOS[contactoIndex]
+		const { mensajes } = contacto
+		const [mensajes_data, setMensajesInfo] = useState(mensajes)
 	
-		const unselectContact = (contact) => {
-			contact.is_selected = false;
-		};
-	
+		const unselectContact = () => false
 		useEffect(() => {
-			setMensajesInfo(mensajes);
-		}, [contactoID, mensajes]);
+			setMensajesInfo(mensajes)
+		}, [contactoID, mensajes])
 	
 		const newMensaje = (nuevoMensaje) => {
 			const mje_nvo = {
@@ -88,14 +92,12 @@ export const Screen = ( ) => {
 				hour: "12:30",
 				id: mensajes_data.length + 1
 			};
-			const updatedMensajes = [...mensajes_data, mje_nvo];
-			setMensajesInfo(updatedMensajes);
-			MOOK_CONTACTOS[contactoIndex].mensajes = updatedMensajes;
+			const updatedMensajes = [...mensajes_data, mje_nvo]
+			setMensajesInfo(updatedMensajes)
+			MOOK_CONTACTOS[contactoIndex].mensajes = updatedMensajes
 	
-			// Obtener el nombre del autor del mensaje de respuesta según el ID
 			const contactoAutor = MOOK_CONTACTOS[contactoIndex].nombre || "Contacto";
-	
-			// Simula la llegada de un mensaje de otro autor después de 3 segundos
+
 			setTimeout(() => {
 				const responseMessage = {
 					author: contactoAutor,
@@ -104,12 +106,12 @@ export const Screen = ( ) => {
 					day: 'Hoy',
 					hour: "12:33",
 					id: mensajes_data.length + 2
-				};
+				}
 				const updatedMensajesWithResponse = [...updatedMensajes, responseMessage];
 				setMensajesInfo(updatedMensajesWithResponse);
 				MOOK_CONTACTOS[contactoIndex].mensajes = updatedMensajesWithResponse;
-			}, 3000);
-		};
+			}, 3000)
+		}
 	
 		return (
 			<>
@@ -119,8 +121,56 @@ export const Screen = ( ) => {
 					<NuevoMje enviarMensaje={newMensaje} />
 				</div>
 			</>
-		);
-	};
+		)
+	} */
 
-*/
-	
+		import React, { useEffect, useState } from 'react'
+		import { MOOK_CONTACTOS } from '../../../Mook'
+		import {  useParams } from 'react-router-dom'
+		import { Header, ListaDeMensajes, NuevoMje } from '../../Components'
+		import "./screenchat.css"
+		import '../../styles.css'
+		
+		
+		export const Screen = ( ) => {
+			const { contactoID } = useParams() 
+			const contactoIndex = MOOK_CONTACTOS.findIndex(contacto => contacto.id === Number(contactoID))
+			const contacto = MOOK_CONTACTOS[contactoIndex]
+			const {mensajes} = contacto
+			const [mensajes_data, setMensajesInfo]= useState(mensajes)
+		
+		
+			const unselectContact = (contact) => {
+				contact.is_selected = false
+			}
+		
+			useEffect(()=> {
+				setMensajesInfo(mensajes)
+			}, [contactoID,mensajes]
+		)
+		
+			const newMensaje = (nuevoMensaje) => {
+				const mje_nvo =   {
+					author: "Yo",
+					text: nuevoMensaje,
+					estado: 'Visto',
+					day: 'Hoy',
+					hour: "12:30",
+					id: mensajes_data.length + 1
+				}
+				const mensajesActualizados = [...mensajes_data, mje_nvo]
+				setMensajesInfo( mensajesActualizados)
+				MOOK_CONTACTOS[contactoIndex].mensajes =  mensajesActualizados
+		}
+		
+			return (
+				<>
+					<div className='screen-chat'>
+				<Header unselectContact={ unselectContact }/>
+				<ListaDeMensajes mensajes_info = {mensajes_data} />
+				<NuevoMje enviarMensaje={newMensaje}/>
+				</div>
+				</>
+		
+				)
+			} 
