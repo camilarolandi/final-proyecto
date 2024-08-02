@@ -205,7 +205,7 @@ export const Contactos = ({ ContactSelect, hideWelcome }) => {
     const [searchString, setSearchString] = useState('') 
     const [showMyProfile, setShowMyProfile] = useState(false) 
     const [showFormNvoContacto, setshowFormNvoContacto] = useState(false) 
-    const [windowObteinWidth, setWindowObteinWidth] = useState(window.innerWidth) 
+    const [windowObteinWidth, setWindowObteinWidth] = useState(window.InnerWidth) 
     const [messageSearchString, setMessageSearchString] = useState('')
     useEffect(() => {}, [location])
 
