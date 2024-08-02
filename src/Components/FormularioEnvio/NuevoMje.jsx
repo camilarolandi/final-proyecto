@@ -3,9 +3,7 @@ import React from 'react'
 import "./nvomje.css"
 import '../../styles.css'
 
-
-
-export const NuevoMje = ({enviarMensaje}) => {
+export const NuevoMje = ({enviarMensaje,colorTema}) => {
 	const handleSubmitNewMensaje =(e) =>{
 		e.preventDefault()
 		const nuevoMensaje = e.target.mensaje.value
@@ -14,7 +12,8 @@ export const NuevoMje = ({enviarMensaje}) => {
 	}
 
 	return (
-		<div className='form-mje-enviar'>
+
+		<div className={`form-mje-enviar ${colorTema}`}>
 			<form className='formulario' onSubmit= {handleSubmitNewMensaje}>
                 <div className='emoji-container'>
                     <i className="smile bi bi-emoji-smile"></i>
@@ -33,33 +32,3 @@ export const NuevoMje = ({enviarMensaje}) => {
 
 
 
-/* funciona pero no lo comprendo */
-/* import React, { useRef } from 'react';
-import "./nvomje.css";
-
-export const NuevoMje = ({ enviarMensaje }) => {
-    const mensajeRef = useRef(null);
-
-    const handleSubmitNewMensaje = (e) => {
-        e.preventDefault();
-        const nuevoMensaje = mensajeRef.current.value;
-        enviarMensaje(nuevoMensaje);
-
-        mensajeRef.current.value = '';
-    };
-
-    return (
-        <div className='form-mje-enviar'>
-            <form className='formulario' onSubmit={handleSubmitNewMensaje}>
-                <input
-                    className="input-texto"
-                    type="text"
-                    ref={mensajeRef}
-                    placeholder='Mensaje'
-                />
-                <button className="btn" type='submit'><i className="bi bi-send"></i></button>
-            </form>
-        </div>
-    );
-};
- */

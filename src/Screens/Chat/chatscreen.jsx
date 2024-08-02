@@ -132,7 +132,7 @@ const contactUnSelect = unselectedContact !== false
 		import '../../styles.css'
 		
 		
-		export const Screen = ( ) => {
+		export const Screen = ({colorTema} ) => {
 			const { contactoID } = useParams() 
 			const contactoIndex = MOOK_CONTACTOS.findIndex(contacto => contacto.id === Number(contactoID))
 			const contacto = MOOK_CONTACTOS[contactoIndex]
@@ -166,9 +166,9 @@ const contactUnSelect = unselectedContact !== false
 			return (
 				<>
 					<div className='screen-chat'>
-				<Header unselectContact={ unselectContact }/>
+				<Header unselectContact={ unselectContact } colorTema={colorTema}/>
 				<ListaDeMensajes mensajes_info = {mensajes_data} />
-				<NuevoMje enviarMensaje={newMensaje}/>
+				<NuevoMje enviarMensaje={newMensaje} colorTema={colorTema}/>
 				</div>
 				</>
 		

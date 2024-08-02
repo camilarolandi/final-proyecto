@@ -58,7 +58,12 @@ gap: 20px;
 align-items: center;
 }
 
-
+.mobile-icons-fns-left{
+    display: flex;
+    padding: 10px;
+    gap:25px;
+    align-items: center;
+}
 
 .contactos-header{
 display: flex;
@@ -149,6 +154,19 @@ left:0
 
 }
 
+.red{
+    background-color: rgba(37, 0, 0, 0.965);
+}
+.purple{
+    background-color:  rgba(56, 0, 39, 0.965);
+}
+.green{
+    background-color:  rgba(1, 37, 0, 0.965);
+}
+.default{
+    background-color:rgba(44, 43, 43, 0.984)  ;
+}
+
 .icons-mobile{
 display: flex;
 flex-direction: column;
@@ -191,12 +209,6 @@ width: 80%;
 }
 
 
-.mobile{
-display: flex;
-padding: 10px;
-gap:25px;
-
-}
 
 .icons-left{
 color: var(--font-color);
@@ -318,11 +330,15 @@ gap:20px;
 .icons-fns-left{
 display: none;
 }
-.mobile{
+/* .mobile{
 display: flex;
 width: 100%;justify-content: space-between;
-}
+} */
 
+.mobile-icons-fns-left{
+    display: flex;
+width: 100%;justify-content: space-between;
+}
 .punto-1{
 display: none;
 }
@@ -353,9 +369,12 @@ font-size: 11px;
 }
 
 @media (min-width: 591px) {
-.mobile{
+/* .mobile{
 display: none;
-}
+} */
+ .mobile-icons-fns-left{
+    display: none;
+ }
 
 .fav{
 display: none;

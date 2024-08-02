@@ -22,9 +22,23 @@
     padding: 0px 10px;
     /* margin: 5px 0; */
   /*   position: fixed; */
-   /*  background-color:#2c2b2bfb;  */
-    background-color:rgba(44, 43, 43, 0.965); 
+background-color:rgba(44, 43, 43, 0.984);  
+    /* background-color:rgba(44, 43, 43, 0.965);  */
+    /* background-color:rgba(56, 0, 39, 0.965);  */
 }
+.red{
+    background-color: rgba(37, 0, 0, 0.965);
+}
+.purple{
+    background-color:  rgba(56, 0, 39, 0.965);
+}
+.green{
+    background-color:  rgba(1, 37, 0, 0.965);
+}
+.default{
+    background-color:rgba(44, 43, 43, 0.984)  ;
+}
+
 
 .flecha{
     color: var(--font-color);

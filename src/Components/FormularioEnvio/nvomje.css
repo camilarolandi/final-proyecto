@@ -96,6 +96,18 @@
 
 }
 
+.red{
+    background-color: rgba(37, 0, 0, 0.965);
+}
+.purple{
+    background-color:  rgba(56, 0, 39, 0.965);
+}
+.green{
+    background-color:  rgba(1, 37, 0, 0.965);
+}
+.default{
+    background-color:rgba(44, 43, 43, 0.984)  ;
+}
 
 @media (min-width: 590px) {
     .btn{

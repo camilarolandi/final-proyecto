@@ -32,6 +32,9 @@
     align-items: center;
     }
 
+  .contenedor-btns-colores{
+    width: 40%;
+  }
 
 @media (max-width: 590px) {
 .welcome-screen{

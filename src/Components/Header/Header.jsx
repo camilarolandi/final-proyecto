@@ -6,15 +6,15 @@ import "./header.css"
  import '../../styles.css'
 
 
-export const Header = ({unselectContact}) => {
+export const Header = ({unselectContact, colorTema}) => {
 const {contactoID } = useParams()
 
 	const contacto = MOOK_CONTACTOS.find(contacto => contacto.id === Number(contactoID))
 	return (
 
 		<>
-
-			<div className='header'>
+  
+			<div className = {`header ${colorTema}`}>
 				
 				<Link className='flecha' onClick={() => unselectContact(contacto)} to = {"/"}><i class="bi bi-arrow-left"></i></Link>
 					<div className='contenedor-contacto'>
