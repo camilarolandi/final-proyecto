@@ -125,13 +125,13 @@ text-align: start;
     overflow: hidden;
     position: fixed;
     z-index: 1; 
-    height: 100%;
+    height: 200%;
     } 
     .form-nvo-contacto {
         width: 100%;
         position: absolute;
         z-index: 1;
-        height: 100%;
+        height: 110%;
         top: 0;
 
     }
