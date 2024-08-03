@@ -134,6 +134,8 @@
 @media (max-width: 590px) {
     .header{
     position: fixed;
+    z-index: 1;
+    top: 0;
     }
     .btns-header{
     gap:10px;

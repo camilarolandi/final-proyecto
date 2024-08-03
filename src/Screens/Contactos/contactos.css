@@ -306,6 +306,9 @@ font-size: 12px;
 }
 
 @media (max-width: 590px) {
+.contacts{
+    padding: 20px;
+}
 .contact-screen{
 width: 100%;
 }
@@ -327,8 +330,6 @@ gap:20px;
 .icons-fns-left{
 display: none;
 }
-
-
 .mobile-icons-fns-left{
     display: flex;
 width: 100%;justify-content: space-between;
