@@ -19,7 +19,7 @@ export const Contactos = ({ contactSelect, hideWelcome, cambioColorOptions, colo
 
     const newContacto = (nuevoNombre, nuevoApellido, nuevoTelefono, nuevoThumbnail) => {
         const contactoExistente = MOOK_CONTACTOS.find(contacto => contacto.nombre === nuevoNombre && contacto.apellido === nuevoApellido)
-
+        
         if (!contactoExistente) {
             const newId = (MOOK_CONTACTOS.length > 0 ? MOOK_CONTACTOS[MOOK_CONTACTOS.length - 1].id + 1 : 1)
             const contacto_nvo = {
@@ -39,7 +39,8 @@ export const Contactos = ({ contactSelect, hideWelcome, cambioColorOptions, colo
                         id: '',
                     }
                 ]
-            };
+            }
+        
 
             MOOK_CONTACTOS.push(contacto_nvo)
             setListaContactos([...MOOK_CONTACTOS])
@@ -183,4 +184,8 @@ export const Contactos = ({ contactSelect, hideWelcome, cambioColorOptions, colo
             )}
         </>
     )
-}
+} 
+
+
+
+

@@ -18,5 +18,4 @@ export const errorFns = {
     nombre: 'Ingrese un nombre válido',
     apellido: 'Ingrese un apellido válido',
     telefono: 'Ingrese un número de teléfono válido, debe contener 9 dígitos',
-    thumbnail: 'Ingrese una URL válida para la foto, el formato es https://www.myfoto.com',
     }
