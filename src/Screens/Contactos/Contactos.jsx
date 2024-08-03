@@ -16,8 +16,14 @@ export const Contactos = ({ contactSelect, hideWelcome ,cambioColorOptions, colo
     const [showFormNvoContacto, setshowFormNvoContacto] = useState(false) 
     const [windowObteinWidth, setWindowObteinWidth] = useState(window.innerWidth) 
     useEffect(() => {}, [location])
+    /* // Leer el color del tema desde localStorage al montar el componente
+    const [colorTemasLocal, setColorTemasLocal] = useState(() => localStorage.getItem('colorTemas') || 'default');
 
-console.log("colores", colorTemas)
+    useEffect(() => {
+        // Actualiza el colorTemas en localStorage cada vez que cambia
+        localStorage.setItem('colorTemas', colorTemasLocal);
+    }, [colorTemasLocal]); */
+
     const newContacto = (nuevoNombre, nuevoApellido, nuevoTelefono, nuevoThumbnail) => {
         const contactoExistente = MOOK_CONTACTOS.find(contacto => contacto.nombre === nuevoNombre && contacto.apellido === nuevoApellido)
     

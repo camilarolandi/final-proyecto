@@ -123,8 +123,8 @@ text-align: start;
     .cont-form-nvo-contacto{
     width:100%;
     overflow: hidden;
- /*    position: fixed;
-    z-index: 1; */
+    position: fixed;
+    z-index: 1; 
     height: 100%;
     } 
     .form-nvo-contacto {
@@ -132,11 +132,10 @@ text-align: start;
         position: absolute;
         z-index: 1;
         height: 100%;
-        bottom: 0;
+        top: 0;
 
     }
 
 }
-/* <i class="bi bi-person-add"></i> */
 
 

@@ -68,7 +68,7 @@ export const MainLayout = () => {
     const [colorTema, setColorTema] = useState('default')
 
     useEffect(() => {
-        if (location.pathname.includes('/screen/') || location.pathname.includes('/contactodata/')) {
+        if (location.pathname.includes('/screen/')) {
             setShowWelcome(false)
         } else {
             setShowWelcome(true)
