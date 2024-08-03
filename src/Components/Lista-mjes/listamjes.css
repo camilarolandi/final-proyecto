@@ -15,7 +15,8 @@
     display:flex;
     flex-direction: column;
     gap:20px;
-    padding: 10px;
+  /*   padding: 10px; */
+
     overflow-y: auto;
     width: 98%;
     height: 80%;
@@ -48,3 +49,11 @@
 .contenedor-chats::-webkit-scrollbar {
     width: 8px; 
 }
+
+
+
+
+@media (max-width: 590px) {
+    .contenedor-chats{
+        padding-top:80px;
+    } }
