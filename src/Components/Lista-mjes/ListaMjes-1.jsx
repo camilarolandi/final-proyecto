@@ -1,6 +1,4 @@
-/* Listado de mensajes 
-RECIBE EL ARRAY DE MENSAJES */
-
+/* Listado de mensajes*/
 import React from 'react'
 import { Mensajes } from '../Mensajes/Mensajes'
 import "./listamjes.css"
