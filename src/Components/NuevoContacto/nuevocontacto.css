@@ -66,7 +66,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.438)
 
 }
- .btn-contact-nvo{
+.btn-contact-nvo{
     background-color: transparent;
     border: none;
     color: var(--font-color);
@@ -125,13 +125,13 @@ text-align: start;
     overflow: hidden;
     position: fixed;
     z-index: 1; 
-    height: 110%;
+    height: 90%;
     } 
     .form-nvo-contacto {
         width: 100%;
         position:fixed;
         z-index: 1;
-        height: 110%;
+        height: 90%;
         top: 0;
 
     }

@@ -14,11 +14,11 @@ export const ContactoData = () => {
     <div className='contenedor-principal'>
         <div className='container-contact-data'>
             <div className='container'>
-            
-                    <Link className='icon' to = {"/screen/" + contacto.id}><i className="bi bi-x-lg"></i></Link>
-            
                 <div className='container-nombre-foto-opciones'>
-                <span className='info'style={{fontWeight:"bold", color:"white"}}>Info. del contacto</span>
+                
+                <span className='info'>Info. del contacto
+                <Link className='icon' to = {"/screen/" + contacto.id}><i className="bi bi-x-lg"></i></Link>
+                </span>
                     <div className='container-nombre-foto'>
                         <img className='photo' src= {contacto.thumbnail} alt="profile-photos"/>
                         < span className='data'>{contacto.nombre} {contacto.apellido}</span>
@@ -93,10 +93,6 @@ export const ContactoData = () => {
                                                 <i className="bi bi-chevron-right"></i>
                                             </div>
                                         </div>
-                                </div>
-                                <div className='contenedor-fns-bottom'> 
-                                    <span style={{color:"red",fontWeight:"bold", fontSize:"12px"}}>Bloquear Contacto</span>
-                                    <span style={{color:"green", fontWeight:"bold", fontSize:"12px"}}>Añadir a favoritos</span>
                                 </div>
                     </div> 
             </div>
