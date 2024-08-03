@@ -87,16 +87,21 @@ export const MainLayout = () => {
         setShowListaColores(!showListaColores)
     }
 
+	const hideColorOptions =() => {
+		setShowListaColores(!showListaColores)
+	}
+
     const changeColorTheme = (color) => {
         setColorTema(color)
-        setShowListaColores(false)
     }
 
     const listaDeColores = [
-        { color: 'default', bgColor: "rgba(44, 43, 43, 0.984)" },
-        { color: 'green', bgColor: 'rgba(1, 37, 0, 0.965)' },
-        { color: 'red', bgColor: 'rgba(37, 0, 0, 0.965)' },
-        { color: 'purple', bgColor: 'rgba(56, 0, 39, 0.965)' }
+        { color: 'Default', bgColor: 'rgba(44, 43, 43, 0.984)' },
+        { color: 'Green', bgColor: 'rgba(1, 37, 0, 0.965)' },
+        { color: 'Red', bgColor: 'rgba(37, 0, 0, 0.965)' },
+        { color: 'Purple', bgColor: 'rgba(56, 0, 39, 0.965)' },
+		{color: 'Pink', bgColor: 'rgba(82, 0, 41, 0.984)' }
+		
     ]
 
 
@@ -128,18 +133,25 @@ export const MainLayout = () => {
 
 		{showListaColores && (
 		
-                <div className='contenedor-btns-colores'>
+		
+                <div className = {`contenedor-btns-colores ${colorTema}`} >
+					<div className='btn-titulo-cont'>
+						<button className='btn-close-colors' onClick={hideColorOptions}> 
+							<i className="bi bi-x-lg"></i>
+						</button>
+						<span className='colores-titulo'>Cambia el color de tu entorno</span>
+					</div>
+					
                     {listaDeColores.map(colorItem => (
-                        <div>
+                        <div className='btn-span-cont'>
 						<button
                             key={colorItem.color}
                             className="color-option"
                             style={{ backgroundColor: colorItem.bgColor }}
                             onClick={() => changeColorTheme(colorItem.color)}
                         >
-                            {colorItem.color}
                         </button>
-						<span>{colorItem.color}</span>
+						<span className='span-color'>{colorItem.color}</span>
 						</div>
                     ))}
 					

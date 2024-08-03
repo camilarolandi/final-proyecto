@@ -52,6 +52,7 @@ const handleSubmitNewContacto=(e) =>{
 
  import React, { useState } from 'react'
 	import "./nuevocontacto.css"
+	import '../../styles.css'
 	import { errorsMje, errorFns } from '../../../erroresValidacion'
 	
 	export const NuevoContacto = ({ contactoNuevo, onCloseNvoContact }) => {

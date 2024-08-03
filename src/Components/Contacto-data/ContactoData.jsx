@@ -14,9 +14,9 @@ export const ContactoData = () => {
     <div className='contenedor-principal'>
         <div className='container-contact-data'>
             <div className='container'>
-                {/* <div className='header-container'> */}
+            
                     <Link className='icon' to = {"/screen/" + contacto.id}><i className="bi bi-x-lg"></i></Link>
-               {/*  </div> */}
+            
                 <div className='container-nombre-foto-opciones'>
                 <span className='info'style={{fontWeight:"bold", color:"white"}}>Info. del contacto</span>
                     <div className='container-nombre-foto'>

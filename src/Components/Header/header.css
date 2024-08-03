@@ -18,24 +18,26 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    position:relative;
     padding: 0px 10px;
     /* margin: 5px 0; */
   /*   position: fixed; */
-background-color:rgba(44, 43, 43, 0.984);  
-    /* background-color:rgba(44, 43, 43, 0.965);  */
-    /* background-color:rgba(56, 0, 39, 0.965);  */
+    background-color:rgba(44, 43, 43, 0.984);  
+
 }
-.red{
+
+.Pink{
+    background-color:rgba(82, 0, 41, 0.984)  ;
+}
+.Red{
     background-color: rgba(37, 0, 0, 0.965);
 }
-.purple{
+.Purple{
     background-color:  rgba(56, 0, 39, 0.965);
 }
-.green{
+.Green{
     background-color:  rgba(1, 37, 0, 0.965);
 }
-.default{
+.Default{
     background-color:rgba(44, 43, 43, 0.984)  ;
 }
 
@@ -131,10 +133,10 @@ background-color:rgba(44, 43, 43, 0.984);
 
 @media (max-width: 590px) {
     .btns-header{
-        gap:15px;
+        gap:10px;
         }
         .btn-header{
-            font-size: 18px;
+            font-size: 16px;
             }
 }
 

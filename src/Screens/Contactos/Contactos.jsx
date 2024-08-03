@@ -5,7 +5,8 @@ import { Link, useLocation } from 'react-router-dom'
 import { MyProfile } from '../../Components/MyProfile/MyProfile'
 import './contactos.css'
 import '../../styles.css'
-import { NuevoContacto } from '../../Components/NuevoContacto/NuevoContato'
+import { NuevoContacto } from '../../Components'
+
 
 export const Contactos = ({ contactSelect, hideWelcome ,cambioColorOptions, colorTemas }) => {
     const location = useLocation() 
@@ -108,7 +109,7 @@ console.log("colores", colorTemas)
                         </div>
                         
                         <div className={`mobile-icons-fns-left ${colorTemas}`} >
-                            <i className=" punto bi bi-three-dots"></i>
+                            <button className='btn-form' onClick={cambioColorOptions}>  <i className=" punto bi bi-three-dots"></i></button>
                             <div className='icons-left'>
                                 <i className=" punto bi bi-camera"></i>
                                 <button className='btn-form' onClick={showNvoContact}> <i className=" add punto bi bi-plus-lg"></i></button>

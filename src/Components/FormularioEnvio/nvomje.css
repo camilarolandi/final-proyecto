@@ -38,8 +38,6 @@
     align-items: center;
     justify-content: space-between;
     gap:10px;
-    
-
 }
 
 .emoji-container{
@@ -96,16 +94,19 @@
 
 }
 
-.red{
+.Pink{
+    background-color:rgba(82, 0, 41, 0.984)  ;
+}
+.Red{
     background-color: rgba(37, 0, 0, 0.965);
 }
-.purple{
+.Purple{
     background-color:  rgba(56, 0, 39, 0.965);
 }
-.green{
+.Green{
     background-color:  rgba(1, 37, 0, 0.965);
 }
-.default{
+.Default{
     background-color:rgba(44, 43, 43, 0.984)  ;
 }
 

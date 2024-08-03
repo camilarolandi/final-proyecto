@@ -13,8 +13,7 @@ return(
 
     <Routes>
         <Route path="/*" element={<MainLayout />} />
-       {/*  <Route path = "/screen/:contactoID" element = {<Screen/>}/>  */}
-      <Route path= "/contactodata/:contactoID" element={<ContactoData/>} /> 
+        <Route path= "/contactodata/:contactoID" element={<ContactoData/>} /> 
         
     </Routes>
     )
