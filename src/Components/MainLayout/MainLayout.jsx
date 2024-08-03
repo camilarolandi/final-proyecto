@@ -62,7 +62,7 @@ import './mainlayout.css'
 import '../../styles.css'
 
 export const MainLayout = () => {
-    const location = useLocation();
+    const location = useLocation()
     const [showWelcome, setShowWelcome] = useState(true)
     const [showListaColores, setShowListaColores] = useState(false)
     const [colorTema, setColorTema] = useState('default')
@@ -73,26 +73,23 @@ export const MainLayout = () => {
         } else {
             setShowWelcome(true)
         }
-    }, [location]);
+    }, [location])
 
     const hideWelcome = () => {
-        setShowWelcome(false);
-    };
+        setShowWelcome(false)
+    }
 
     const contactSelect = (contact) => {
         contact.is_selected = true
-    };
+    }
 
     const cambioColorOptions = () => {
         setShowListaColores(!showListaColores)
     }
- /*    const changeColorTheme = (color) => {
-        setColorTema(color)
-        setShowListaColores(false)
-    } */
-	const hideColorOptions =() => {
-		setShowListaColores(!showListaColores)
-	}
+
+    const hideColorOptions = () => {
+        setShowListaColores(!showListaColores)
+    }
 
     const changeColorTheme = (color) => {
         setColorTema(color)
@@ -103,28 +100,25 @@ export const MainLayout = () => {
         { color: 'Green', bgColor: 'rgba(1, 37, 0, 0.965)' },
         { color: 'Red', bgColor: 'rgba(37, 0, 0, 0.965)' },
         { color: 'Purple', bgColor: 'rgba(56, 0, 39, 0.965)' },
-		{color: 'Pink', bgColor: 'rgba(82, 0, 41, 0.984)' }
-		
+        { color: 'Pink', bgColor: 'rgba(82, 0, 41, 0.984)' }
     ]
 
-
     return (
-        <div className= "main-layout" >
-            <Contactos 
-				colorTemas={colorTema} 
-                hideWelcome={hideWelcome} 
-                cambioColorOptions={cambioColorOptions} 
+        <div className="main-layout">
+            <Contactos
+                colorTemas={colorTema}
+                hideWelcome={hideWelcome}
+                cambioColorOptions={cambioColorOptions}
                 contactSelect={contactSelect}
-				
             />
-            <Routes>    
+            <Routes>
                 <Route path="/screen/:contactoID" element={<Screen colorTema={colorTema} />} />
                 <Route path="/contactodata/:contactoID/screen" element={
                     <>
                         <ContactoData />
                         <Screen colorTema={colorTema} />
                     </>
-                }/> 
+                } />
             </Routes>
 
             {showWelcome && (
@@ -134,35 +128,30 @@ export const MainLayout = () => {
                 </div>
             )}
 
-		{showListaColores && (
-		
-		
-                <div className = {`contenedor-btns-colores ${colorTema}`} >
-					<div className='btn-titulo-cont'>
-						<button className='btn-close-colors' onClick={hideColorOptions}> 
-							<i className="bi bi-x-lg"></i>
-						</button>
-						<span className='colores-titulo'>Cambia el color de tu entorno</span>
-					</div>
-					
+            {showListaColores && (
+                <div className={`contenedor-btns-colores ${colorTema}`}>
+                    <div className='btn-titulo-cont'>
+                        <button className='btn-close-colors' onClick={hideColorOptions}>
+                            <i className="bi bi-x-lg"></i>
+                        </button>
+                        <span className='colores-titulo'>Cambia el color de tu entorno</span>
+                    </div>
+
                     {listaDeColores.map(colorItem => (
                         <div className='btn-span-cont'>
-						<button
-                            key={colorItem.color}
-                            className="color-option"
-                            style={{ backgroundColor: colorItem.bgColor }}
-                            onClick={() => changeColorTheme(colorItem.color)}
-                        >
-                        </button>
-						<span className='span-color'>{colorItem.color}</span>
-						</div>
+                            <button
+                                key={colorItem.color}
+                                className="color-option"
+                                style={{ backgroundColor: colorItem.bgColor }}
+                                onClick={() => changeColorTheme(colorItem.color)}
+                            ></button>
+                            <span className='span-color'>{colorItem.color}</span>
+                        </div>
                     ))}
-					
+
                 </div>
-				
             )}
 
-
         </div>
-    );
-};
+    )
+}

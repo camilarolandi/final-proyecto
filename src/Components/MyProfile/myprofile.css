@@ -3,89 +3,100 @@
     --font-color: #ffffff;
     --border-color: #000000;
     --bgcolor-secondary: #1d1d1d;
-    --bgcolor-chat-izq: #1d1d1d;;
+    --bgcolor-chat-izq: #1d1d1d;
     --bgcolor-chat-der: #0f5515;
     --bgcolor-primary-light: rgb(255, 255, 255);
     --font-color-light: #000000;
     --bgcolor-secondary-light: #f0f2f5;
     --bgcolor-input: #808080;
 }
-
-.myProfile-header{
-	background-color: #1D1D1D;
-	color: var(--font-color);
-	width: 100%;
-	border: 1px solid #1D1D1D;
-	display: flex;
-	align-items: end;
-	gap: 15px;
-	height: 20%;
-
+.Pink{
+    background-color:rgba(82, 0, 41, 0.984)  ;
+}
+.Red{
+    background-color: rgba(37, 0, 0, 0.965);
+}
+.Purple{
+    background-color:  rgba(56, 0, 39, 0.965);
+}
+.Green{
+    background-color:  rgba(1, 37, 0, 0.965);
+}
+.Default{
+    background-color:rgba(44, 43, 43, 0.984)  ;
 }
 
+.myProfile-header {
+    background-color: #1D1D1D;
+    color: var(--font-color);
+    width: 100%;
+    border: 1px solid #1D1D1D;
+    display: flex;
+    align-items: end;
+    gap: 15px;
+    height: 20%;
+}
 
-.my-profile{
-    background-color:var(--bgcolor-primary) ;
+.my-profile {
+    background-color: var(--bgcolor-primary);
     height: 100%;
-    width:100%;
-    position:absolute;
+    width: 100%;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:20px;
+    gap: 20px;
     overflow: hidden;
-	right:1px;
-	left:1px;
+    right: 1px;
+    left: 1px;
 }
 
-
-.container-myProfile{
+.container-myProfile {
     width: 100%;
-    border-bottom: 1px solid  var(--bgcolor-secondary);
-    border-top: 1px solid  var(--bgcolor-secondary);
+    border-bottom: 1px solid var(--bgcolor-secondary);
+    border-top: 1px solid var(--bgcolor-secondary);
     background-color: transparent;
     display: flex;
     flex-direction: column;
-	padding: 10px 15px; 
-	height: 12%;
-	overflow: hidden;
-	gap:10px;
+    padding: 10px 15px;
+    height: 12%;
+    overflow: hidden;
+    gap: 10px;
 }
 
-
-.my-photo{
-	height: 170px;
-	width: 170px;
-	border-radius: 100%;
-	margin: 3px;
+.my-photo {
+    height: 170px;
+    width: 170px;
+    border-radius: 100%;
+    margin: 3px;
 }
 
-.flecha-profile{
-	background-color: transparent;
-	border: none;
-	color: white;
-	padding:  15px;
-	margin: 5px;
-	font-weight: bold;
-}
-.profile-title{
-padding: 15px;
+.flecha-profile {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 15px;
+    margin: 5px;
+    font-weight: bold;
 }
 
-.my-data{
-	color:var(--font-color) ;
-	font-size: 14px;
+.profile-title {
+    padding: 15px;
 }
 
-.myInfo-container{
-	display: flex;
-	justify-content: space-between;
-	/* padding-top: 8px; */
+.my-data {
+    color: var(--font-color);
+    font-size: 14px;
 }
 
-.profile-mje{
-	padding: 5px;
-	color:var(--font-color) ;
-	font-size: 14px;
-	text-align: center;
+.myInfo-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-mje {
+    padding: 5px;
+    color: var(--font-color);
+    font-size: 14px;
+    text-align: center;
 }

@@ -1,4 +1,3 @@
-/* funciona :) */
 import React from 'react'
 import "./nvomje.css"
 import '../../styles.css'

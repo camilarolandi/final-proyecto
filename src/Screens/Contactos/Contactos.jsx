@@ -1,4 +1,4 @@
-/* es el q funciona bien */
+/* Pantalla de contactos */
 import React, { useEffect, useState } from 'react'
 import { MOOK_CONTACTOS } from '../../../Mook'
 import { Link, useLocation } from 'react-router-dom'
@@ -7,26 +7,19 @@ import './contactos.css'
 import '../../styles.css'
 import { NuevoContacto } from '../../Components'
 
-
-export const Contactos = ({ contactSelect, hideWelcome ,cambioColorOptions, colorTemas }) => {
-    const location = useLocation() 
+export const Contactos = ({ contactSelect, hideWelcome, cambioColorOptions, colorTemas }) => {
+    const location = useLocation()
     const [listaContactos, setListaContactos] = useState([])
-    const [searchString, setSearchString] = useState('') 
-    const [showMyProfile, setShowMyProfile] = useState(false) 
-    const [showFormNvoContacto, setshowFormNvoContacto] = useState(false) 
-    const [windowObteinWidth, setWindowObteinWidth] = useState(window.innerWidth) 
-    useEffect(() => {}, [location])
-    /* // Leer el color del tema desde localStorage al montar el componente
-    const [colorTemasLocal, setColorTemasLocal] = useState(() => localStorage.getItem('colorTemas') || 'default');
+    const [searchString, setSearchString] = useState('')
+    const [showMyProfile, setShowMyProfile] = useState(false)
+    const [showFormNvoContacto, setshowFormNvoContacto] = useState(false)
+    const [windowObteinWidth, setWindowObteinWidth] = useState(window.innerWidth)
 
-    useEffect(() => {
-        // Actualiza el colorTemas en localStorage cada vez que cambia
-        localStorage.setItem('colorTemas', colorTemasLocal);
-    }, [colorTemasLocal]); */
+    useEffect(() => {}, [location])
 
     const newContacto = (nuevoNombre, nuevoApellido, nuevoTelefono, nuevoThumbnail) => {
         const contactoExistente = MOOK_CONTACTOS.find(contacto => contacto.nombre === nuevoNombre && contacto.apellido === nuevoApellido)
-    
+
         if (!contactoExistente) {
             const newId = (MOOK_CONTACTOS.length > 0 ? MOOK_CONTACTOS[MOOK_CONTACTOS.length - 1].id + 1 : 1)
             const contacto_nvo = {
@@ -47,16 +40,15 @@ export const Contactos = ({ contactSelect, hideWelcome ,cambioColorOptions, colo
                     }
                 ]
             };
-    
+
             MOOK_CONTACTOS.push(contacto_nvo)
             setListaContactos([...MOOK_CONTACTOS])
         }
     }
-    
+
     const contactoSeleccionado = listaContactos.find(contacto => contacto.is_selected === true)
     const chatSeleccionado = contactoSeleccionado !== undefined
-    
-    
+
     useEffect(() => {
         const handleResize = () => {
             setWindowObteinWidth(window.innerWidth)
@@ -79,7 +71,6 @@ export const Contactos = ({ contactSelect, hideWelcome ,cambioColorOptions, colo
             )
             setListaContactos(listaContactosFilter)
         } else {
-
             setListaContactos(MOOK_CONTACTOS)
         }
     }, [searchString])
@@ -98,14 +89,13 @@ export const Contactos = ({ contactSelect, hideWelcome ,cambioColorOptions, colo
             {showFormNvoContacto && <NuevoContacto contactoNuevo={newContacto} onCloseNvoContact={hideNvoContact} />}
             {screenSize && (
                 <div className="contact-screen">
-                    
                     <header className={`photo-profile-cont ${colorTemas}`}>
                         <img
                             className='myprofile-photo'
                             src='https://www.creartuavatar.com/images/f17.svg'
                             onClick={showProfile}
                         />
-                        {showMyProfile && <MyProfile onClose={hideProfile} />}
+                        {showMyProfile && <MyProfile onClose={hideProfile} colorTemas={colorTemas} />}
                         <div className='icons-fns-left'>
                             <i className="icons-left bi bi-people"></i>
                             <button className='btn-form' onClick={showNvoContact}> <i className="icons-left bi bi-chat-quote"></i></button>
@@ -113,7 +103,7 @@ export const Contactos = ({ contactSelect, hideWelcome ,cambioColorOptions, colo
                             <i className="icons-left bi bi-chat-right-dots"></i>
                             <button className='btn-form' onClick={cambioColorOptions}> <i className="icons-left bi bi-three-dots-vertical"></i></button>
                         </div>
-                        
+
                         <div className={`mobile-icons-fns-left ${colorTemas}`} >
                             <button className='btn-form' onClick={cambioColorOptions}>  <i className=" punto bi bi-three-dots"></i></button>
                             <div className='icons-left'>
@@ -182,10 +172,9 @@ export const Contactos = ({ contactSelect, hideWelcome ,cambioColorOptions, colo
                             <span>Chats</span>
                         </div>
 
-
                         <div className="icons-mobile">
-                            <button style={{color:"white", background:"transparent", border:"none"}}  onClick={showProfile}>
-                            <i className="bi bi-gear-wide-connected"></i>
+                            <button style={{ color: "white", background: "transparent", border: "none" }} onClick={showProfile}>
+                                <i className="bi bi-gear-wide-connected"></i>
                             </button>
                             <span>Configuracion</span>
                         </div>
@@ -194,4 +183,4 @@ export const Contactos = ({ contactSelect, hideWelcome ,cambioColorOptions, colo
             )}
         </>
     )
-} 
+}
