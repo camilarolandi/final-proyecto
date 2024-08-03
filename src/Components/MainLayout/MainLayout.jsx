@@ -86,7 +86,10 @@ export const MainLayout = () => {
     const cambioColorOptions = () => {
         setShowListaColores(!showListaColores)
     }
-
+ /*    const changeColorTheme = (color) => {
+        setColorTema(color)
+        setShowListaColores(false)
+    } */
 	const hideColorOptions =() => {
 		setShowListaColores(!showListaColores)
 	}

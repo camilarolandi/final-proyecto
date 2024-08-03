@@ -23,7 +23,7 @@ background-color: var(--bgcolor-html-body)
 .contact-screen{
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: space-between;
 align-items: center;
 gap:10px;
 background-color:  var(--bgcolor-primary); 
@@ -34,7 +34,7 @@ position: relative;
 }
 
 .photo-profile-cont{
-background-color:var(--bgcolor-secondary); 
+background-color:rgba(44, 43, 43, 0.984); 
 display: flex;
 justify-content: space-between;
 width: 100%;
@@ -63,8 +63,8 @@ align-items: center;
     padding: 10px;
     gap:25px;
     align-items: center;
-    position: fixed;
-    z-index: 1;
+    /* position: fixed;
+    z-index: 1; */
 }
 
 .contactos-header{
@@ -85,7 +85,7 @@ width: 30%;
 .contacts{
 display: flex;
 flex-direction: column;
-height: 80%;
+height: 75%;
 width: 95%;
 background-color: var(--bgcolor-primary);
 padding: 10px;
@@ -382,5 +382,4 @@ display: none;
 .container-opciones-mobile{
 display: none;
 } 
-
 } 

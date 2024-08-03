@@ -241,6 +241,15 @@
 }
 
 
+@media (min-width: 590px) {
+    .icons-fns-right {
+        font-size:10px;
+    }
+
+    .icons-left-fns{
+        font-size:10px;
+    }
+}
 @media (max-width: 590px) {
     .container {
         width: 100%;
@@ -249,11 +258,12 @@
         top: 0%;
         left: 0%;
         border-radius:0%;
+        gap: 40px;
     }
 
     .photo{
-        width: 100px;
-        height: 100px;
+        width: 130px;
+        height: 130px;
         }
 
 }
