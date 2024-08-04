@@ -14,7 +14,6 @@
 .screen-chat{
     height:100%;
     width: 100%;
-    background-image:  url(https://media.istockphoto.com/id/1409540606/es/vector/vector-de-entrarnos-en-contacto-con-patr%C3%B3n-entrarnos-en-contacto-con-fondo-transparente.jpg?s=612x612&w=0&k=20&c=5zg7sKC_9MfdudJVkhUCwwWuNOG6d22Sa5_vLeuxRoY=);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -22,5 +21,12 @@
     align-items: center;
 }
 
+@media (max-width: 590px) {
+    .screen-chat {
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+}
 
 

@@ -37,7 +37,7 @@ export const Screen = ({ colorTema }) => {
 
 	return (
 		<>
-			<div className='screen-chat'>
+			<div className='screen-chat' style={{backgroundImage:'url(/bg-chats.jpg)'}}>
 				<Header unselectContact={unselectContact} colorTema={colorTema} />
 				<ListaDeMensajes mensajes_info={mensajes_data} />
 				<NuevoMje enviarMensaje={newMensaje} colorTema={colorTema} />
