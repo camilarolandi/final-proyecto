@@ -46,6 +46,7 @@
 .flecha {
     color: var(--font-color);
     font-weight: bold;
+    padding: 10px;
 }
 
 .contenedor-contacto {

@@ -28,10 +28,10 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     border: 3px solid var(--border-color);
     padding: 10px;
-    gap: 10px;
+    gap: 8px;
     background-color: var(--bgcolor-primary);
     height: 90%;
     width: 30%;
@@ -54,7 +54,6 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding: 5px;
     border-radius: 20px;
     background-color: var(--bgcolor-primary);
     width: 100%;
@@ -97,10 +96,11 @@
 }
 
 .icon {
-    color: var(--font-color);
+    color: red;
     text-align: start;
-    font-size: 12px;
+    font-size: 16px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .info-contact{
