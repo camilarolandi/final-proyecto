@@ -11,6 +11,19 @@
     --bgcolor-input: #808080;
     --bg-scroll-bar: #a5a5a5;
 }
+:root {
+    --bgcolor-primary: #000000;
+    --font-color: #ffffff;
+    --border-color: #000000;
+    --bgcolor-secondary: #1d1d1d;
+    --bgcolor-chat-izq: #1d1d1d;
+    --bgcolor-chat-der: #0f5515;
+    --bgcolor-primary-light: rgb(255, 255, 255);
+    --font-color-light: #000000;
+    --bgcolor-secondary-light: #f0f2f5;
+    --bgcolor-input: #808080;
+    --bg-scroll-bar: #a5a5a5;
+}
 
 .contenedor-chats {
     display: flex;
@@ -20,6 +33,7 @@
     width: 98%;
     height: 80%;
     margin: 5px;
+    position: relative;
 }
 
 .contenedor-chats::-webkit-scrollbar {
@@ -40,8 +54,10 @@
     background-color: var(--bgcolor-secondary);
 }
 
+
 @media (max-width: 590px) {
     .contenedor-chats {
-        padding-top: 80px;
+        margin-bottom: 25px;
     }
+
 }
