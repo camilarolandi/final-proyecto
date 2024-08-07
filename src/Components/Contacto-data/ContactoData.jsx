@@ -10,8 +10,8 @@ export const ContactoData = () => {
     const contacto = MOOK_CONTACTOS.find(contacto => contacto.id === Number(contactoID))
 
     return (
-        <div className='contenedor-principal'>
-            <div className='container-contact-data'>
+        <section className='contenedor-principal'>
+            <section className='container-contact-data'>
                 <div className='container'>
                     <div className='container-nombre-foto-opciones'>
                         <div className='container-nombre-foto'>
@@ -106,8 +106,8 @@ export const ContactoData = () => {
                         </Link>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </section>
     )
 }
 

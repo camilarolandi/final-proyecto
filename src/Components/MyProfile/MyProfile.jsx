@@ -5,7 +5,7 @@ import '../../styles.css'
 export const MyProfile = ({ onClose, colorTemas }) => {
     return (
         
-        <div className='my-profile'>
+        <section className='my-profile'>
             <header  className={`myProfile-header ${colorTemas}`}>
                 <button className='flecha-profile' onClick={onClose}> 
                     <i class="bi bi-arrow-left"> </i>
@@ -32,6 +32,6 @@ export const MyProfile = ({ onClose, colorTemas }) => {
                     <i className="my-data bi bi-pencil"></i>
                 </div>
             </div> 
-        </div>
+        </section>
     )
 }

@@ -33,7 +33,7 @@ export const Contactos = ({ contactSelect, hideWelcome, cambioColorOptions, colo
                     {
                         author: 'Envia un mensaje y comienza a chatear',
                         text: '',
-                        estado: '',
+                        estado: 'En linea',
                         day: '',
                         hour: '01:01',
                         id: '',
@@ -89,7 +89,7 @@ export const Contactos = ({ contactSelect, hideWelcome, cambioColorOptions, colo
         <>
             {showFormNvoContacto && <NuevoContacto contactoNuevo={newContacto} onCloseNvoContact={hideNvoContact} />}
             {screenSize && (
-                <div className="contact-screen">
+                <section className="contact-screen">
                     <header className={`photo-profile-cont ${colorTemas}`}>
                         <img
                             className='myprofile-photo'
@@ -180,7 +180,7 @@ export const Contactos = ({ contactSelect, hideWelcome, cambioColorOptions, colo
                             <span>Configuracion</span>
                         </div>
                     </div>
-                </div>
+                </section>
             )}
         </>
     )

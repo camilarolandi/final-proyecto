@@ -105,7 +105,7 @@ export const NuevoContacto = ({ contactoNuevo, onCloseNvoContact }) => {
                     onChange={(e) => setThumbnail(e.target.value)}
                     placeholder='https://www.myfoto.com'
                 />
-                <span style={{ color: "green", fontWeight: "bold", fontSize: "12px" }}> Si desea colocar una foto de perfil, el formato admitido es https://www.myfoto.com</span>
+                < span style={{ color: "green", fontWeight: "bold", fontSize: "12px" }}> Si desea colocar una foto de perfil, el formato admitido es https://www.myfoto.com</span>
             </div>
 
             <div className='nvo-contacto-btns-inf'>

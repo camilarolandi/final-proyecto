@@ -51,7 +51,7 @@ export const MainLayout = () => {
     ]
 
     return (
-        <div className="main-layout">
+        <section className="main-layout">
             <Contactos
                 colorTemas={colorTema}
                 hideWelcome={hideWelcome}
@@ -98,6 +98,6 @@ export const MainLayout = () => {
                 </div>
             )}
 
-        </div>
+        </section>
     )
 }

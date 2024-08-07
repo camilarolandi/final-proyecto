@@ -12,7 +12,7 @@ export const NuevoMje = ({enviarMensaje,colorTema}) => {
 
 	return (
 
-		<div className={`form-mje-enviar ${colorTema}`}>
+		<section className={`form-mje-enviar ${colorTema}`}>
 			<form className='formulario' onSubmit= {handleSubmitNewMensaje}>
                 <div className='emoji-container'>
                     <i className="smile bi bi-emoji-smile"></i>
@@ -23,7 +23,7 @@ export const NuevoMje = ({enviarMensaje,colorTema}) => {
                 <i className=" emoji bi bi-mic-fill"></i>
 
 			</form>
-		</div>
+		</section>
 	)
 }
 
