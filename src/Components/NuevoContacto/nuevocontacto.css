@@ -36,7 +36,7 @@
 
 .label-contact {
     font-weight: bold;
-    color: var(--bgcolor-input);
+    color: var(--font-color);
     padding: 5px;
     font-size: 14px;
 }
@@ -48,7 +48,7 @@
     border-radius: 20px;
     box-sizing: border-box;
     background-color: #000000;
-    color: var(--bgcolor-input);
+    color: var(--font-color);
     font-size: 12px;
 }
 
@@ -59,7 +59,7 @@
     border: none;
     padding: 10px;
     margin: 0px;
-    color: var(--bgcolor-input);
+    color: var(--font-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.438);
 }
 
@@ -81,7 +81,7 @@
 .cont-contact-nvo {
     display: flex;
     flex-direction: row;
-    padding: 0px; /* Corregido: cambiado de 'px' a '0px' */
+    padding: 0px;
     justify-content: space-between;
     gap: 20px;
     width: 100%;
@@ -110,7 +110,7 @@
 .texto-bottom {
     font-size: 15px;
     text-align: center;
-    color: var(--bgcolor-input);
+    color: var(--font-color);
 }
 
 @media (max-width: 590px) {

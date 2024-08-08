@@ -21,14 +21,13 @@ export const Contactos = ({ contactSelect, hideWelcome, cambioColorOptions, colo
         const contactoExistente = MOOK_CONTACTOS.find(contacto => contacto.nombre === nuevoNombre && contacto.apellido === nuevoApellido)
         
         if (!contactoExistente) {
-            const newId = (MOOK_CONTACTOS.length > 0 ? MOOK_CONTACTOS[MOOK_CONTACTOS.length - 1].id + 1 : 1)
             const contacto_nvo = {
                 nombre: nuevoNombre,
                 apellido: nuevoApellido,
                 telefono: nuevoTelefono,
                 estado: "En el trabajo",
                 thumbnail: nuevoThumbnail || "https://w7.pngwing.com/pngs/527/663/png-transparent-logo-person-user-person-icon-rectangle-photography-computer-wallpaper-thumbnail.png",
-                id: newId,
+                id: listaContactos.length+1,
                 mensajes: [
                     {
                         author: 'Envia un mensaje y comienza a chatear',
@@ -185,7 +184,5 @@ export const Contactos = ({ contactSelect, hideWelcome, cambioColorOptions, colo
         </>
     )
 } 
-
-
 
 

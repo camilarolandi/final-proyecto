@@ -10,7 +10,7 @@ Las funcionalidades son:
 
 Cuenta con tres paginas: principal, screen y contactosData.
 
-Las problematicas presentadas en la elaboracion del trabajo fueron el redimensionamiento de la pantalla para poder pasar de desktop a mobile (la inspiracion fue WhatsApp web) y la implementacion de LocalStorage para el almacenamiento de contactos y mensajes.
+Las problematicas presentadas en la elaboracion del trabajo fueron el redimensionamiento de la pantalla para poder pasar de desktop a mobile (la inspiracion fue WhatsApp web) y la implementacion de LocalStorage para el almacenamiento de contactos.
 
 ¡Aclaracion! 
 Botones funcioanales 

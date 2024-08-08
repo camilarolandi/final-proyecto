@@ -4,7 +4,7 @@ import "./nuevocontacto.css"
 import '../../styles.css'
 import { errorsMje, errorFns } from '../../../erroresValidacion'
 
-export const NuevoContacto = ({ contactoNuevo, onCloseNvoContact }) => {
+export const NuevoContacto = ({ contactoNuevo, onCloseNvoContact}) => {
     const [nombre, setNombre] = useState('')
     const [apellido, setApellido] = useState('')
     const [telefono, setTelefono] = useState('')
@@ -61,7 +61,7 @@ export const NuevoContacto = ({ contactoNuevo, onCloseNvoContact }) => {
                     id="nombre"
                     value={nombre}
                     onChange={(e) => setNombre(e.target.value)}
-                    placeholder='Nombre'
+                    placeholder='Juan'
                 />
                 {errorNombre && <span className="error-message">{errorNombre}</span>}
             </div>
@@ -75,7 +75,7 @@ export const NuevoContacto = ({ contactoNuevo, onCloseNvoContact }) => {
                     id="apellido"
                     value={apellido}
                     onChange={(e) => setApellido(e.target.value)}
-                    placeholder='Apellido'
+                    placeholder='Perez'
                 />
                 {errorApellido && <span className="error-message">{errorApellido}</span>}
             </div>
@@ -89,7 +89,7 @@ export const NuevoContacto = ({ contactoNuevo, onCloseNvoContact }) => {
                     id="telefono"
                     value={telefono}
                     onChange={(e) => setTelefono(e.target.value)}
-                    placeholder='Teléfono'
+                    placeholder='154123456'
                 />
                 {errorTelefono && <span className="error-message">{errorTelefono}</span>}
             </div>
@@ -105,7 +105,7 @@ export const NuevoContacto = ({ contactoNuevo, onCloseNvoContact }) => {
                     onChange={(e) => setThumbnail(e.target.value)}
                     placeholder='https://www.myfoto.com'
                 />
-                < span style={{ color: "green", fontWeight: "bold", fontSize: "12px" }}> Si desea colocar una foto de perfil, el formato admitido es https://www.myfoto.com</span>
+                <span style={{ color: "green", fontWeight: "bold", fontSize: "12px" }}> Si desea colocar una foto de perfil, el formato admitido es https://www.myfoto.com</span>
             </div>
 
             <div className='nvo-contacto-btns-inf'>
@@ -115,6 +115,7 @@ export const NuevoContacto = ({ contactoNuevo, onCloseNvoContact }) => {
                     <button className="btn-contact-nvo" onClick={onCloseNvoContact}>Cancelar</button>
                 </div>
             </div>
+
         </form>
     )
 }
